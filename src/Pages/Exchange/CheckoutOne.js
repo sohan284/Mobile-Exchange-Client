@@ -20,8 +20,6 @@ const CheckoutOne = ({ amount }) => {
     const [item,setItem] = useState();
     const navigate = useNavigate();
     let totalAmount = 0;
-
-  
     useEffect(() => {
         fetch(`https://mobile-exchange.onrender.com/product/${productId}`)
             .then(res => res.json())
