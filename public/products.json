@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Iphone 13 Blue 128gb",
+    "quantity":999 ,"price": 63399,
+    "disc": {
+      "model": "Iphone 13",
+      "brand": "Apple",
+      "color": "Blue",
+      "ram": "4gb",
+      "storage": "128gb",
+      "bettery-health": "92%",
+      "variant": "ZP",
+      "origin": "HongKong"
+      
+    },
+    "img": "https://i.ibb.co/q7vr3X4/325404526-9034676199890718-835680713708630186-n.jpg"
+  },
+  {
+    "name": "Iphone 12 pro Blue 128gb",
+    "quantity":999 ,"price": 67399,
+    "disc": {
+      "model": "Iphone 12 pro",
+      "brand": "Apple",
+      "color": "Blue",
+      "ram": "4gb",
+      "storage": "128gb",
+      "bettery-health": "94%",
+      "variant": "ZP",
+      "origin": "HongKong"
+      
+    },
+    "img": "https://i.ibb.co/xj237kd/325920159-5879724498771013-358115576973904805-n.jpg"
+  },
+  {
+    "name": "Iphone XS Max",
+    "quantity":999 ,"price": 42499,
+    "disc": {
+      "model": "Iphone Xs Max",
+      "brand": "Apple",
+      "color": "Silver",
+      "ram": "3gb",
+      "storage": "256gb",
+      "bettery-health": "83%",
+      "variant": "LL",
+      "origin": "USA"
+      
+    },
+    "img": "https://i.ibb.co/02FpgXd/327483004-6292127150800149-4839001804473608728-n.jpg"
+  },
+  {
+    "name": "Iphone 12 white 128gb",
+    "quantity":999 ,"price": 55000,
+    "disc": {
+      "model": "Iphone 12",
+      "brand": "Apple",
+      "color": "White",
+      "ram": "4gb",
+      "storage": "128gb",
+      "bettery-health": "87%",
+      "variant": "HN",
+      "origin": "India"
+      
+    },
+    "img": "https://i.ibb.co/QnSyDLh/328446108-5927727230598731-4921357201640249886-n.jpg"
+  },
+  {
+    "name": "Iphone 12 white 256gb",
+    "quantity":999 ,"price": 62000,
+    "disc": {
+      "model": "Iphone 12",
+      "brand": "Apple",
+      "color": "white",
+      "ram": "4gb",
+      "storage": "256gb",
+      "bettery-health": "100%",
+      "variant": "ZP",
+      "origin": "HongKong"
+    },
+    "img": "https://i.ibb.co/pPpjMrP/329183346-5641053939355588-7344245256247609321-n.jpg"
+  }
+]
