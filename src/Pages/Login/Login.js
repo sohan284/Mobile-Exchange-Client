@@ -44,15 +44,15 @@ const Login = () => {
             <div>
               <h1 className='text-3xl text-center font-bold mb-7'>Login</h1>
               <h6 className='text-sm font-semibold '>Your Email</h6>
-              <input className='w-full formInput'
+              <input className='w-full  text-black  formInput'
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder='Email'
               />
 
-              <h6 className='text-sm font-semibold mt-5'>Password</h6>
-              <input className='w-full formInput'
+              <h6 className='text-sm  font-semibold mt-5'>Password</h6>
+              <input className='w-full text-black formInput'
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

@@ -59,7 +59,7 @@ const Signup = () => {
                             <h1 className='text-3xl text-center font-bold mb-5'>Create Account</h1>
 
                             <h6 className='text-sm font-semibold '>Your Name</h6>
-                            <input className='w-full formInput' 
+                            <input className='w-full  text-black  formInput' 
                             type="text"
                             value={name} 
                             required
@@ -67,7 +67,7 @@ const Signup = () => {
                             placeholder='Name' />
                            
                             <h6 className='text-sm  font-semibold mt-5'>Email</h6>
-                            <input className='w-full formInput' 
+                            <input className='w-full  text-black  formInput' 
                             type="text"
                             value={email} 
                             required
@@ -75,15 +75,13 @@ const Signup = () => {
                             placeholder='Email' />
                             
                             <h6 className='text-sm font-semibold mt-5'>Password</h6>
-                            <input  required className='w-full formInput' 
+                            <input  required className='w-full  text-black  formInput' 
                             type="password"
                             value={password} 
                             onChange={(e)=>setPassword(e.target.value)}
                             placeholder='Password' />
-
                             <h6 className='text-sm font-semibold mt-5'>Re-enter Password</h6>
-
-                            <input className='w-full formInput' type="password"
+                            <input className='w-full  text-black  formInput' type="password"
                             value={cPassword} 
                             required
                             onChange={(e)=>setCPassword(e.target.value)}
