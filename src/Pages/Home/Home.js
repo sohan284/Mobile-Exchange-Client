@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import useAdmin from '../../Hooks/useAdmin';
 import Banner from '../../Shared/Banner';
 import Footer from '../../Shared/Footer';
+import Header from '../../Shared/Header';
 import Products from './Products/Products';
 
 

@@ -31,7 +31,6 @@ function App() {
       <hr />
       <Routes>
         <Route path="/" element={<Home></Home>}> </Route>
-          <Route index element={<Products></Products>}></Route>
           <Route path='search' element={<SearchContainer></SearchContainer>}></Route>
           <Route path='/addProduct' element={
             <RequireAdmin>

@@ -35,10 +35,11 @@ const Header = () => {
         }
         {admin.admin &&
           <ul>
+            <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/'}><div>Home</div></Link></li>
             <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/allOrders'}><div>All Orders</div></Link></li>
             <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/addproduct'}><div>Add Product</div></Link></li>
             <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/manageproduct'}><div>Manage Product</div></Link></li>
-            <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/allOrders'}><div>Manage Users</div></Link></li>
+            <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/manageusers'}><div>Manage Users</div></Link></li>
           </ul>
         }
     </ul>
@@ -75,10 +76,11 @@ const Header = () => {
         }
          {admin.admin &&
           <ul>
+            <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/'}><div>Home</div></Link></li>
             <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/allOrders'}><div>All Orders</div></Link></li>
             <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/addproduct'}><div>Add Product</div></Link></li>
             <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/manageproduct'}><div>Manage Product</div></Link></li>
-            <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/alluser'}><div>Manage Users</div></Link></li>
+            <li className='btn bg-transparent btn-info btn-sm mx-2 text-primary border-none'><Link to={'/manageusers'}><div>Manage Users</div></Link></li>
             {!user &&
             <li className='btn bg-success btn-success btn-sm mx-2 text-primary border-none'><Link to={'/login'}><div>Login</div></Link></li>
           }

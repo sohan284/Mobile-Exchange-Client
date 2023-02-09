@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import Footer from '../../../Shared/Footer';
+import Header from '../../../Shared/Header';
 
 
 const Users = () => {
@@ -54,7 +56,8 @@ const Users = () => {
     }
     return (
         <div>
-            <div   class="overflow-x-auto container mt-5 mx-auto w-full">
+            <Header></Header>
+            <div   class="overflow-x-auto container h-screen mt-10 mx-auto w-full">
                 <table class="table w-full">
                     <thead>
                         <tr>
@@ -73,7 +76,7 @@ const Users = () => {
                                         <h1>{index + 1}</h1>
                                     </label>
                                 </th>
-                                <td>
+                                <td className=''>
                                     <div class="flex items-center space-x-3">
                                         <div class="">
                                             <div class="mask mask-squircle w-10 h-10">
@@ -102,6 +105,7 @@ const Users = () => {
                     }
                 </table>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../../../Shared/Footer';
+import Header from '../../../Shared/Header';
 
 const AllOrders = () => {
     const [orders,setOrder] = useState()
@@ -27,10 +29,10 @@ const AllOrders = () => {
     }
     return (
         <div>
-            
+            <Header></Header>
             <div>
             <div>
-            <div   class="overflow-x-auto container mt-5 mx-auto w-full">
+            <div   class="overflow-x-auto container h-screen mt-5 mx-auto w-full">
                 <table class="table w-full">
                     <thead>
                         <tr>
@@ -97,6 +99,7 @@ const AllOrders = () => {
             </div>
         </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
