@@ -6,9 +6,10 @@ import useToken from '../../Hooks/useToken';
 import Footer from '../../Shared/Footer';
 import Header from '../../Shared/Header';
 import Loading from '../../Shared/Loading';
+import {AiFillGooglePlusCircle} from 'react-icons/ai';
 
 const Signup = () => {
-    const [signInWithGoogle,gUser] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser] = useSignInWithGoogle(auth);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const location = useLocation();
@@ -30,82 +31,109 @@ const Signup = () => {
     }
     const [token] = useToken(user || gUser)
 
-    const handleSingUp = () =>{
-        if(/@g(oogle)?mail\.com$/.test(email) && password === cPassword){
-            createUserWithEmailAndPassword(email,password)
+    const handleSingUp = () => {
+        if (/@g(oogle)?mail\.com$/.test(email) && password === cPassword) {
+            createUserWithEmailAndPassword(email, password)
         }
     }
-    
-    if(token){ 
-            navigate(from,{replace:true})     
+
+    if (token) {
+        navigate(from, { replace: true })
     }
 
-      if (error) {
+    if (error) {
         errorMessage = <p className='text-[red] font-semibold my-3 text-sm'>Please enter valid information.</p>
-      }
-      if (loading) {
-     return <div className='flex justify-center h-screen items-center'>
-       <Loading></Loading>
-      </div>
-      }
+    }
+    if (loading) {
+        return <div className='flex justify-center h-screen items-center'>
+            <Loading></Loading>
+        </div>
+    }
     return (
         <div>
-           <Header></Header>
-           <div   className='flex border my-10 rounded container mx-auto'>
-     
-          <div className='text-primary w-full  rounded p-8 mt-5 shadow-lg'>
-            <div>
-                        <form>
-                            <h1 className='text-3xl text-center font-bold mb-5'>Create Account</h1>
+            <Header></Header>
+           <div className='m-10 p-5'>
+           <div className='flex rounded-xl my-10  container mx-auto'>
+                <div className='flex my-5 border  bg-white rounded container mx-auto'>
+                    <section class="h-screen">
+                        <div class="px-6 h-full text-gray-800">
+                            <div
+                                class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
+                            >
+                                <div
+                                    class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0"
+                                >
+                                    <img
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                                        class="w-full"
+                                        alt="Sample image"
+                                    />
+                                </div>
+                                <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+                                    <form>
+                                        <div onClick={signInWithGoogle} class="flex flex-row bg-secondary w-48 items-center button mx-auto justify-center text-primary rounded-xl">
+                                            <p class="text-lg mb-0 mr-4">Sign in with</p> <AiFillGooglePlusCircle className='text-5xl py-1'></AiFillGooglePlusCircle>
 
-                            <h6 className='text-sm font-semibold '>Your Name</h6>
-                            <input className='w-full  text-black  formInput' 
-                            type="text"
-                            value={name} 
-                            required
-                            onChange={(e)=>setName(e.target.value)}
-                            placeholder='Name' />
-                           
-                            <h6 className='text-sm  font-semibold mt-5'>Email</h6>
-                            <input className='w-full  text-black  formInput' 
-                            type="text"
-                            value={email} 
-                            required
-                            onChange={(e)=>setEmail(e.target.value)}
-                            placeholder='Email' />
-                            
-                            <h6 className='text-sm font-semibold mt-5'>Password</h6>
-                            <input  required className='w-full  text-black  formInput' 
-                            type="password"
-                            value={password} 
-                            onChange={(e)=>setPassword(e.target.value)}
-                            placeholder='Password' />
-                            <h6 className='text-sm font-semibold mt-5'>Re-enter Password</h6>
-                            <input className='w-full  text-black  formInput' type="password"
-                            value={cPassword} 
-                            required
-                            onChange={(e)=>setCPassword(e.target.value)}
-                            placeholder='re-password' />
-                            <br />
-                            <button onClick={handleSingUp} className='w-full button text-white font-bold rounded p-1 mt-5'>Signup</button>
-                            {errorMessage}
-                        </form>
-                        <div className=" mt-5" ><small>Already have an account? <span onClick={handleLogin} className='font-semibold text-[yellow] lgin' > Log-In</span></small> </div>
-                       
-                    </div>
-                    
-                    <div className="divider my-3" ><small>OR</small></div>
-                    <button onClick={() => signInWithGoogle()} className=' shadow-lg w-full rounded p-1 font-semibold cBtn'>
-                        <div className='flex justify-center items-center'>
-                            <div><img className='w-10' src="https://i.ibb.co/Qj5082F/images-removebg-preview.png" alt="" /></div>
-                            <div className='font-bold text-black'>Continue With Google</div>
-                        </div></button>
-                  
-                   
+                                        
+                                        </div>
+
+                                        <div
+                                            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
+                                        >
+                                            <p class="text-center font-semibold mx-4 mb-0">Or</p>
+                                        </div>
+
+
+                                        <input className='w-full my-2 text-black  formInput'
+                                            type="text"
+                                            value={name}
+                                            required
+                                            onChange={(e) => setName(e.target.value)}
+                                            placeholder='Name' />
+
+
+                                        <input className='w-full my-2 text-black  formInput'
+                                            type="text"
+                                            value={email}
+                                            required
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            placeholder='Email' />
+
+
+                                        <input required className='w-full my-2 text-black  formInput'
+                                            type="password"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}
+                                            placeholder='Password' />
+
+                                        <input className='w-full my-2 text-black  formInput' type="password"
+                                            value={cPassword}
+                                            required
+                                            onChange={(e) => setCPassword(e.target.value)}
+                                            placeholder='re-password' />
+                                        <div class="text-center  lg:text-left">
+                                            <button onClick={() => signInWithGoogle()} className=' button w-full text-white font-bold rounded p-2 mt-1'>Log In</button>
+                                            <p class="text-sm font-semibold mt-2 pt-1 mb-0">
+                                                Already have an account?
+                                                <a onClick={handleLogin}
+                                                    href="#!"
+                                                    class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
+                                                >Sign in</a
+                                                >
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                 </div>
 
+
+
             </div>
+           </div>
             <Footer></Footer>
         </div>
 

@@ -7,12 +7,11 @@ const AddProduct = () => {
     const [pvalue, setPValue] = useState();
     const [name, setName] = useState();
     const [price, setPrice] = useState();
-    const [quantity, setQuantity] = useState();
-    const [discount, setDiscount] = useState();
+    const [color, setColor] = useState();
+    const [Ram, setRam] = useState();
     const [productType, setProductType] = useState();
     const [placeOrigin, setPlaceOrigin] = useState();
     const [modelNumber, setModelNumber] = useState();
-    const [color, setColor] = useState();
     const [size, setSize] = useState();
     const [productMaterial, setProductMaterial] = useState();
     const [img, setImg] = useState();
@@ -22,12 +21,12 @@ const AddProduct = () => {
             p_id: parseInt(pvalue),
             name: name,
             price: parseInt(price),
-            quantity: parseInt(quantity),
-            discount: discount,
+            Color: parseInt(color),
+            
             disc: {
                 product_type: productType,
                 place_origin: placeOrigin,
-                model_number: modelNumber,
+                ram: Ram,
                 product_metarial: productMaterial,
                 color: color,
                 size: size
@@ -47,7 +46,7 @@ const AddProduct = () => {
             .then(result => {
                 setName('');
                 setColor('')
-                setDiscount('');
+                setRam('');
                 setModelNumber('')
                 setPrice();
                 setPlaceOrigin();
@@ -81,21 +80,39 @@ const AddProduct = () => {
                             />
                         </div>
                         <div className='px-1'>
-                            <h1 className='font-bold pl-1 text-[10px]'>Quantity</h1>
+                            <h1 className='font-bold pl-1 text-[10px]'>Color</h1>
                             <input className='mb-1 shadow-lg border text-black rounded-md p-1'
-                                name='Quantity'
+                                name='color'
                                 type="Number"
-                                onChange={(e) => setQuantity(e.target.value)}
-                                placeholder='quantity'
+                                onChange={(e) => setColor(e.target.value)}
+                                placeholder='color'
                             />
                         </div>
                         <div className='px-1'>
-                            <h1 className='font-bold pl-1 text-[10px]'>Discount</h1>
+                            <h1 className='font-bold pl-1 text-[10px]'>ram</h1>
                             <input className='mb-1 shadow-lg border  text-black  rounded-md p-1'
-                                name='discount'
+                                name='ram'
                                 type="text"
-                                onChange={(e) => setDiscount(e.target.value)}
-                                placeholder='Discount'
+                                onChange={(e) => setRam(e.target.value)}
+                                placeholder='Ram'
+                            />
+                        </div>
+                        <div className='px-1'>
+                            <h1 className='font-bold pl-1 text-[10px]'>Model</h1>
+                            <input className='mb-1 shadow-lg border  text-black  rounded-md p-1'
+                                name='model_number'
+                                type="text"
+                                onChange={(e) => setModelNumber(e.target.value)}
+                                placeholder='model_number'
+                            />
+                        </div>
+                        <div className='px-1'>
+                            <h1 className='font-bold pl-1 text-[10px]'>Origin</h1>
+                            <input className='mb-1 shadow-lg border  text-black  rounded-md p-1'
+                                name='place-origin'
+                                type="text"
+                                onChange={(e) => setPlaceOrigin(e.target.value)}
+                                placeholder=''
                             />
                         </div>
                     </div>
@@ -109,50 +126,7 @@ const AddProduct = () => {
                         onChange={(e) => setImg(e.target.value)}
                         placeholder='URL'
                     />
-                    <div className='bg-slate-100 border-slate-300 my-2 shadow-lg border rounded-md p-1'>
-                        <h1 className='font-bold'>Discription</h1>
-                        <div className='grid lg:grid-cols-2'>
-                            <input className='mx-auto text-xs my-1 text-black shadow-lg border rounded-md p-1'
-                                name='product_type'
-                                type="text"
-                                onChange={(e) => setProductType(e.target.value)}
-                                placeholder='Product_type'
-                            />
-                            <input className='mx-auto my-1 text-xs text-black  shadow-lg border rounded-md p-1'
-                                name='place_origin'
-                                type="text"
-                                onChange={(e) => setPlaceOrigin(e.target.value)}
-                                placeholder='Place_origin'
-                            />
-                            <input className='mx-auto my-1 text-xs text-black  shadow-lg border rounded-md p-1'
-                                name='model_number'
-                                type="text"
-                                onChange={(e) => setModelNumber(e.target.value)}
-                                placeholder='Model_number'
-                            />
-                            <input className='mx-auto my-1 text-xs text-black  shadow-lg border rounded-md p-1'
-                                name='product_metarial'
-                                type="text"
-                                onChange={(e) => setProductMaterial(e.target.value)}
-                                placeholder='Product_metarial'
-                            />
-                            <input className='mx-auto my-1 lg:mb-5 text-xs text-black  shadow-lg border rounded-md p-1'
-                                name='color'
-                                type="text"
-                                onChange={(e) => setColor(e.target.value)}
-                                placeholder='Color'
-                            />
-                            <input className='mx-auto my-1 mb-5 text-xs text-black   shadow-lg border rounded-md p-1'
-                                name='size'
-                                type="text"
-                                onChange={(e) => setSize(e.target.value)}
-                                placeholder='Size'
-                            />
-
-                        </div>
-                    </div>
-
-
+                   
                     <button onClick={handleAddProduct} className='btn btn-sm font-bold button border-none'>Add Product</button>
                 </form>
 

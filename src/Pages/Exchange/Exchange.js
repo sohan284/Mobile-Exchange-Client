@@ -25,41 +25,7 @@ const Exchange = () => {
             .then(data => setProduct(data))
     })
     let errorMessage;
-    const percentage = parseInt(product.discount);
-    const discountPrice = (percentage / 100) * product.price;
-    const previousPrice = parseInt(product.price - discountPrice);
-
-
-    let productQuantity;
-    if (product.quantity > 0) {
-        productQuantity = product.quantity;
-    }
-    else productQuantity = <p className='inline text-[#ff0000c4]'>Out of stock</p>
-
-    const increase = event => {
-        const val = document.getElementById('quantity_value').value;
-        const intVal = parseInt(val);
-
-        if (intVal >= 0) {
-            const increaseQuantity = parseInt(val) + 1;
-            document.getElementById('quantity_value').value = parseInt(increaseQuantity);
-
-        }
-
-    }
-    const decrease = () => {
-        const val = document.getElementById('quantity_value').value;
-        if (val > 0) {
-            const increaseQuantity = parseInt(val) - 1;
-            document.getElementById('quantity_value').value = parseInt(increaseQuantity);
-        }
-
-    }
-    
-    const delivered = (id) => {
-    navigate(`/checkout/${id}`)
-}
-
+   
     const handleAddtoCart = () => {
 
         const orderQuantity = 1
@@ -150,9 +116,8 @@ const Exchange = () => {
         <button onClick={handleAddtoCart} class="flex ml-auto button rounded text-primary font-semibold text-center border-0 py-2 px-6">Add to Cart <BsFillCartPlusFill className='text-xl ml-2'/>  </button>
           }
           {admin.admin &&
-        <button onClick={handleCustomise} class="flex ml-auto button rounded text-primary border-0 py-2 px-6">Customise</button>
+        <button onClick={()=>{handleCustomise(product?._id)}} class="flex ml-auto button rounded text-primary border-0 py-2 px-6">Customise</button>
           }
-          
         </div>
       </div>
     </div>
